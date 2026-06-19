@@ -1,0 +1,39 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.user
+
+# Assets sin optimizar o en bruto
+assets/images/raw/
+assets/images/originals/
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Archivos temporales y de respaldo
+*.tmp
+*.bak
+*.log
+*~
+
+# Dependencias (por si en el futuro se incorpora npm)
+node_modules/
+package-lock.json
+
+# Archivos de entorno (por si en el futuro se usan variables de entorno)
+.env
+.env.local
+
+# Carpetas de build (por si en el futuro se agrega un proceso de compilación)
+dist/
+build/
+out/
