@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -55,20 +56,28 @@
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
       <div class="container hero-content">
-        <h1 class="hero-title">Encontrá el repuesto correcto para tu vehículo</h1>
-        <p class="hero-subtitle">Diagnóstico computarizado gratuito, asesoría técnica especializada y envío a todo Costa
-          Rica.</p>
-        <div class="hero-actions">
-          <a href="https://wa.me/50684478000" class="btn btn-primary hero-cta" target="_blank"
-            rel="noopener noreferrer">
-            Consultar por WhatsApp
-          </a>
-          <a href="#productos" class="btn btn-secondary">Ver productos</a>
+        <div class="hero-text">
+          <h1 class="hero-title">¿Check Engine o pérdida de potencia? <span class="text-accent">Te ayudamos a
+              identificar la pieza correcta.</span></h1>
+          <p class="hero-subtitle">Sensores, bobinas y motores nuevos con diagnóstico gratuito, asesoría técnica
+            especializada y envíos a todo Costa Rica.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/50684478000" class="btn btn-primary hero-cta" target="_blank"
+              rel="noopener noreferrer">
+              <i data-lucide="message-circle" aria-hidden="true"></i>
+              Hablar con un asesor
+            </a>
+            <a href="#productos" class="btn btn-secondary">Ver productos →</a>
+          </div>
+          <div class="hero-trust">
+            <span class="trust-badge">Diagnóstico gratuito</span>
+            <span class="trust-badge">Asesoría técnica real</span>
+            <span class="trust-badge">Envío nacional</span>
+          </div>
         </div>
-        <div class="hero-trust">
-          <span class="trust-badge">Diagnóstico gratuito</span>
-          <span class="trust-badge">Asesoría técnica</span>
-          <span class="trust-badge">Envío nacional</span>
+        <div class="hero-image">
+          <img src="assets/images/brand/LogoMotorSensor.png" alt="Logo MotorSensor — Repuestos automotrices" width="500"
+            height="500" loading="lazy">
         </div>
       </div>
     </section>
@@ -82,22 +91,22 @@
 
         <div class="problem-grid">
           <article class="problem-card">
-            <span class="problem-icon" aria-hidden="true">⚠</span>
+            <span class="problem-icon" aria-hidden="true"><i data-lucide="alert-triangle"></i></span>
             <h3>Check Engine encendido</h3>
             <p>La luz de Check Engine puede indicar fallas en sensores, bobinas o el sistema de inyección.</p>
           </article>
           <article class="problem-card">
-            <span class="problem-icon" aria-hidden="true">⚡</span>
+            <span class="problem-icon" aria-hidden="true"><i data-lucide="zap"></i></span>
             <h3>Pérdida de potencia</h3>
             <p>El vehículo no acelera como antes, tiembla o pierde fuerza en pendientes.</p>
           </article>
           <article class="problem-card">
-            <span class="problem-icon" aria-hidden="true">⛽</span>
+            <span class="problem-icon" aria-hidden="true"><i data-lucide="fuel"></i></span>
             <h3>Alto consumo de combustible</h3>
             <p>Un sensor defectuoso puede causar que el motor consuma más combustible del necesario.</p>
           </article>
           <article class="problem-card">
-            <span class="problem-icon" aria-hidden="true">🔧</span>
+            <span class="problem-icon" aria-hidden="true"><i data-lucide="power"></i></span>
             <h3>Fallas de encendido</h3>
             <p>El motor no arranca correctamente o presenta encendido irregular y vibraciones.</p>
           </article>
@@ -161,22 +170,22 @@
 
         <div class="features-grid">
           <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">🔍</span>
+            <span class="feature-icon" aria-hidden="true"><i data-lucide="scan-line"></i></span>
             <h3>Diagnóstico gratuito</h3>
             <p>Escaneo computarizado sin costo al adquirir repuestos para identificar la falla exacta.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">🎯</span>
+            <span class="feature-icon" aria-hidden="true"><i data-lucide="message-circle"></i></span>
             <h3>Asesoría técnica</h3>
             <p>Te orientamos para que comprés la pieza correcta según tu marca, modelo y síntomas.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">📦</span>
+            <span class="feature-icon" aria-hidden="true"><i data-lucide="package"></i></span>
             <h3>Envío nacional</h3>
             <p>Enviamos repuestos a cualquier parte de Costa Rica.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon" aria-hidden="true">💰</span>
+            <span class="feature-icon" aria-hidden="true"><i data-lucide="wallet"></i></span>
             <h3>Opciones para todo presupuesto</h3>
             <p>Alternativas originales y genéricas certificadas para que eligás según tus posibilidades.</p>
           </article>
@@ -265,10 +274,34 @@
 
     <!-- ===== COTIZACIÓN ===== -->
     <section class="quote-section" id="contacto">
-      <div class="container">
-        <h2 class="section-title">Cotizá tu repuesto</h2>
-        <p class="section-subtitle">Completá el formulario y te contactamos con opciones compatibles para tu vehículo.
-        </p>
+      <div class="container quote-wrapper">
+        <div class="quote-info">
+          <h2 class="section-title">Cotizá tu <span class="text-accent">repuesto</span></h2>
+          <p class="section-subtitle">Completá el formulario y te contactamos con opciones compatibles para tu vehículo.
+          </p>
+          <ul class="quote-contact-list">
+            <li>
+              <i data-lucide="phone" class="quote-contact-icon" aria-hidden="true"></i>
+              <strong>San Carlos</strong>
+              <a href="https://wa.me/50684478000" target="_blank" rel="noopener noreferrer">+506 8447-8000</a>
+            </li>
+            <li>
+              <i data-lucide="phone" class="quote-contact-icon" aria-hidden="true"></i>
+              <strong>Pérez Zeledón</strong>
+              <a href="https://wa.me/50684408000" target="_blank" rel="noopener noreferrer">+506 8440-8000</a>
+            </li>
+            <li>
+              <i data-lucide="phone" class="quote-contact-icon" aria-hidden="true"></i>
+              <strong>Naranjo</strong>
+              <a href="https://wa.me/50684438000" target="_blank" rel="noopener noreferrer">+506 8443-8000</a>
+            </li>
+            <li>
+              <i data-lucide="mail" class="quote-contact-icon" aria-hidden="true"></i>
+              <strong>Correo</strong>
+              <a href="mailto:motorsensorcr@gmail.com">motorsensorcr@gmail.com</a>
+            </li>
+          </ul>
+        </div>
 
         <form class="quote-form" id="quote-form" novalidate>
           <div class="form-group">
@@ -304,8 +337,13 @@
 
     <!-- ===== FAQ ===== -->
     <section class="faq-section" id="faq">
-      <div class="container">
-        <h2 class="section-title">Preguntas frecuentes</h2>
+      <div class="container faq-wrapper">
+        <div class="faq-info">
+          <h2 class="section-title">Preguntas <span class="text-accent">frecuentes</span></h2>
+          <p class="section-subtitle">Resolvé tus dudas antes de contactarnos.</p>
+          <a href="https://wa.me/50684478000" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Hablar
+            con un asesor</a>
+        </div>
 
         <div class="faq-list">
           <details class="faq-item">
@@ -389,16 +427,31 @@
 
       <div class="footer-social">
         <h3>Redes sociales</h3>
-        <ul>
+        <ul class="social-links">
           <li>
-            <a href="https://www.facebook.com/p/Motorsensor-100063665601663/" target="_blank"
-              rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.facebook.com/p/Motorsensor-100063665601663/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook de MotorSensor" class="social-link">
+              <i data-lucide="facebook" aria-hidden="true"></i>
+              Motorsensor
+            </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/motor.sensor/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.instagram.com/motor.sensor/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram de MotorSensor" class="social-link">
+              <i data-lucide="instagram" aria-hidden="true"></i>
+              @motor.sensor
+            </a>
           </li>
           <li>
-            <a href="https://www.tiktok.com/@motorsensor5" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://www.tiktok.com/@motorsensor" target="_blank" rel="noopener noreferrer"
+              aria-label="TikTok de MotorSensor" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z" />
+              </svg>
+              @motorsensor5
+            </a>
           </li>
         </ul>
       </div>
