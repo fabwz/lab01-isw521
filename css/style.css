@@ -765,6 +765,7 @@ body.light-mode .quote-contact-list li {
 }
 
 .branch-map {
+  width: 100%;
   border: none;
   border-radius: var(--radius-md);
   margin-bottom: var(--space-2);
