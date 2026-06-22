@@ -70,14 +70,36 @@ document.addEventListener('DOMContentLoaded', function () {
   if (quoteForm) {
     quoteForm.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      var name = quoteForm.elements['name'].value.trim();
+      var phone = quoteForm.elements['phone'].value.trim();
+      var brand = quoteForm.elements['vehicle-brand'].value.trim();
+      var model = quoteForm.elements['vehicle-model'].value.trim();
+      var year = quoteForm.elements['vehicle-year'].value.trim();
+      var message = quoteForm.elements['message'].value.trim();
+      var branchSelect = quoteForm.elements['branch'];
+      var branch = branchSelect.value;
+      var branchName = branchSelect.options[branchSelect.selectedIndex].text;
+
+      if (!name || !phone || !brand || !model || !year || !message || !branch) {
+        return;
+      }
+
+      var text = 'Hola, soy ' + name + ' (' + phone + '). '
+        + 'Tengo un ' + brand + ' ' + model + ' ' + year + '. '
+        + 'Consulta: ' + message + '. '
+        + 'Sucursal: ' + branchName + '.';
+
+      var url = 'https://wa.me/' + branch + '?text=' + encodeURIComponent(text);
+
       var formData = new FormData(quoteForm);
       var data = {};
       formData.forEach(function (value, key) {
         data[key] = value;
       });
       localStorage.setItem('motorsensor-last-quote', JSON.stringify(data));
-      localStorage.setItem('motorsensor-form-submitted', 'true');
-      quoteForm.reset();
+
+      window.open(url, '_blank');
     });
   }
 
