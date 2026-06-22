@@ -770,18 +770,6 @@ body.light-mode .quote-contact-list li {
   margin-bottom: var(--space-2);
 }
 
-.branch-map-link {
-  font-size: var(--text-sm);
-  color: var(--color-primary);
-  font-weight: var(--weight-semibold);
-  transition: color var(--transition-fast);
-}
-
-.branch-map-link:hover {
-  color: #FF6B55;
-  text-decoration: underline;
-}
-
 .branch-card h3 {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
