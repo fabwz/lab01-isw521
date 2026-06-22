@@ -4,6 +4,7 @@
   --color-primary: #E5392B;
   --color-primary-hover: #C62E21;
   --color-primary-soft: rgba(229, 57, 43, 0.15);
+  --color-primary-text: #FF6B55;
 
   /* === Superficies — Tres niveles de profundidad para jerarquía visual entre secciones === */
   --color-dark: #111111;
@@ -94,6 +95,8 @@ body.light-mode {
   --color-gray: #4B5563;
   --color-gray-light: #6B7280;
   --color-light: #FFFFFF;
+
+  --color-primary-text: #C0392B;
 
   --border-card: 1px solid rgba(0, 0, 0, 0.08);
   --border-card-hover: 1px solid rgba(0, 0, 0, 0.15);

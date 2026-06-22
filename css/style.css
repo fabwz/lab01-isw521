@@ -941,7 +941,7 @@ body.light-mode .quote-contact-list li {
 }
 
 .faq-answer a {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   text-decoration: underline;
 }
 
@@ -1097,8 +1097,11 @@ body.light-mode .quote-contact-list li {
   margin: 0 auto;
 }
 
-.quote-info {
+.quote-section > .container:first-child {
   margin-bottom: var(--space-8);
+}
+
+.quote-info {
   display: flex;
   flex-direction: column;
 }
@@ -1126,7 +1129,7 @@ body.light-mode .quote-contact-list li {
 }
 
 .quote-contact-icon {
-  color: #E5392B;
+  color: var(--color-primary-text);
   flex-shrink: 0;
   width: 20px;
   height: 20px;
@@ -1139,7 +1142,7 @@ body.light-mode .quote-contact-list li {
 }
 
 .quote-contact-list a {
-  color: #E5392B;
+  color: var(--color-primary-text);
   font-weight: 600;
   font-size: 1rem;
   transition: color var(--transition-fast);
@@ -1443,10 +1446,6 @@ body.light-mode .quote-contact-list li {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-12);
     align-items: start;
-  }
-
-  .quote-info {
-    margin-bottom: 0;
   }
 
   .quote-form {
