@@ -693,6 +693,12 @@ body.light-mode .quote-contact-list li {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 .brand-card {
   display: inline-flex;
   flex-direction: column;
@@ -847,9 +853,10 @@ body.light-mode .quote-contact-list li {
   color: var(--color-gray);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(229, 57, 43, 0.1);
 }
@@ -1075,7 +1082,7 @@ body.light-mode .quote-contact-list li {
 
 .hero-stat-label {
   font-size: var(--text-sm);
-  color: #9CA3AF;
+  color: var(--color-gray-light);
   margin-top: var(--space-2);
 }
 
@@ -1170,7 +1177,7 @@ body.light-mode .quote-contact-list li {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #9CA3AF;
+  color: var(--color-gray-light);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color var(--transition-fast);

@@ -81,6 +81,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // FAQ accordion accessibility
+  document.querySelectorAll('.faq-item').forEach(function (item, index) {
+    var summary = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+    var answerId = 'faq-answer-' + index;
+    answer.id = answerId;
+    summary.setAttribute('aria-expanded', item.open ? 'true' : 'false');
+    summary.setAttribute('aria-controls', answerId);
+    item.addEventListener('toggle', function () {
+      summary.setAttribute('aria-expanded', item.open ? 'true' : 'false');
+    });
+  });
+
   // Restore form submitted state
   if (localStorage.getItem('motorsensor-form-submitted') === 'true') {
     localStorage.removeItem('motorsensor-form-submitted');
