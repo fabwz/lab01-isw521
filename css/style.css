@@ -287,7 +287,10 @@ ol {
    ================================================================ */
 
 .hero {
-  padding: var(--space-16) 0 var(--space-12);
+  min-height: calc(100dvh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding: var(--space-8) 0;
   background: transparent;
   position: relative;
   overflow: hidden;
@@ -301,7 +304,7 @@ ol {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: var(--text-4xl);
+  font-size: clamp(2rem, 1.5rem + 2.25vw, 2.85rem);
   font-weight: var(--weight-extrabold);
   line-height: var(--leading-tight);
   margin-bottom: var(--space-5);
@@ -325,8 +328,8 @@ ol {
 
 .hero-trust {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
+  flex-wrap: nowrap;
+  gap: var(--space-3);
 }
 
 .trust-badge {
@@ -873,19 +876,35 @@ ol {
   box-shadow: 0 6px 28px var(--color-success-glow);
 }
 
-/* ===== HERO IMAGE ===== */
+/* ===== HERO STATS ===== */
 
-.hero-image {
+.hero-stats {
   display: none;
 }
 
-.hero-image img {
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  mix-blend-mode: luminosity;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
-  mask-image: linear-gradient(to right, transparent 0%, black 40%);
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6) 0;
+}
+
+.hero-stat + .hero-stat {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-stat-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-white);
+  text-shadow: 0 0 20px rgba(229, 57, 43, 0.3), 0 0 40px rgba(229, 57, 43, 0.1);
+}
+
+.hero-stat-label {
+  font-size: var(--text-sm);
+  color: #9CA3AF;
+  margin-top: var(--space-2);
 }
 
 /* ===== LUCIDE ICONS ===== */
@@ -1010,11 +1029,11 @@ ol {
   }
 
   .hero {
-    padding: var(--space-20) 0 var(--space-16);
+    padding: var(--space-10) 0;
   }
 
   .hero-title {
-    font-size: var(--text-5xl);
+    font-size: clamp(2.5rem, 1.8rem + 3.25vw, 3.75rem);
   }
 
   .problem-grid {
@@ -1094,7 +1113,7 @@ ol {
 
   /* Hero: two columns */
   .hero {
-    padding: var(--space-24) 0 var(--space-20);
+    padding: var(--space-10) 0;
   }
 
   .hero-content {
@@ -1104,12 +1123,14 @@ ol {
   }
 
   .hero-text {
-    flex: 1;
+    flex: 1 1 55%;
   }
 
-  .hero-image {
-    display: block;
-    flex: 0 0 auto;
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 35%;
   }
 
   /* Quote: two columns */
