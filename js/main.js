@@ -1,4 +1,29 @@
+// Apply saved theme before DOM is fully loaded to prevent flash
+(function () {
+  var saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    document.body.classList.add('light-mode');
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
+  // Theme toggle
+  var themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    function updateToggle() {
+      var isLight = document.body.classList.contains('light-mode');
+      themeToggle.setAttribute('aria-label', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
+    }
+    updateToggle();
+
+    themeToggle.addEventListener('click', function () {
+      document.body.classList.toggle('light-mode');
+      var isLight = document.body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      updateToggle();
+    });
+  }
+
   // Initialize Lucide icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();

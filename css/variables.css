@@ -92,3 +92,27 @@
   --container-padding: var(--space-5);
   --header-height: 72px;
 }
+
+/* === Light Mode === */
+body.light-mode {
+  --color-dark: #FFFFFF;
+  --color-dark-2: #FFFFFF;
+  --color-dark-3: #FFFFFF;
+  --color-dark-4: #FFFFFF;
+  --color-dark-deep: #FFFFFF;
+  --color-white: #111111;
+  --color-gray: #4B5563;
+  --color-gray-light: #6B7280;
+  --color-light: #FFFFFF;
+
+  --border-card: 1px solid rgba(0, 0, 0, 0.08);
+  --border-card-hover: 1px solid rgba(0, 0, 0, 0.15);
+  --border-subtle: 1px solid rgba(0, 0, 0, 0.06);
+  --border-input: 1px solid rgba(0, 0, 0, 0.15);
+  --border-chip: 1px solid rgba(0, 0, 0, 0.1);
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-float: 0 4px 20px rgba(22, 163, 74, 0.25);
+}

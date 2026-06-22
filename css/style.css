@@ -282,6 +282,136 @@ ol {
   display: none;
 }
 
+/* ===== THEME TOGGLE ===== */
+
+.theme-toggle {
+  background: none;
+  border: var(--border-card);
+  border-radius: var(--radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-white);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.theme-icon--light {
+  display: none;
+}
+
+body.light-mode .theme-icon--dark {
+  display: none;
+}
+
+body.light-mode .theme-icon--light {
+  display: block;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode {
+  background: radial-gradient(ellipse at 80% 20%, rgba(229, 57, 43, 0.07) 0%, #FFFFFF 50%);
+  background-attachment: fixed;
+}
+
+body.light-mode .site-header {
+  background: rgba(249, 250, 251, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+body.light-mode .problem-section,
+body.light-mode .products-section,
+body.light-mode .features-section,
+body.light-mode .brands-section,
+body.light-mode .branches-section,
+body.light-mode .quote-section,
+body.light-mode .faq-section {
+  background: transparent;
+  border-top-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .site-footer {
+  background: #F9FAFB;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .footer-bottom {
+  border-top-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .hero-stat+.hero-stat {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .hero-stat-label {
+  color: var(--color-gray);
+}
+
+body.light-mode .problem-card,
+body.light-mode .product-card,
+body.light-mode .feature-card,
+body.light-mode .branch-card,
+body.light-mode .faq-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .trust-badge {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: var(--color-gray);
+}
+
+body.light-mode .nav-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .btn-secondary {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: var(--color-gray);
+}
+
+body.light-mode .whatsapp-float {
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
+}
+
+body.light-mode .brand-card {
+  background: #F3F4F6;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .brand-card:hover {
+  background: #E5E7EB;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .brand-logo {
+  filter: brightness(0);
+  opacity: 0.7;
+}
+
+body.light-mode .brand-card:hover .brand-logo {
+  opacity: 1;
+}
+
+body.light-mode .quote-contact-list li {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
 /* ================================================================
    HERO — Radial glow, two-column on desktop
    ================================================================ */
