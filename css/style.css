@@ -557,6 +557,7 @@ ol {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -929,7 +930,7 @@ ol {
   padding: var(--space-6) 0;
 }
 
-.hero-stat + .hero-stat {
+.hero-stat+.hero-stat {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1057,6 +1058,25 @@ ol {
 }
 
 /* ================================================================
+   MOBILE MENU OVERLAY
+   ================================================================ */
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 104;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.nav-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================================================================
    TABLET — 768px
    ================================================================ */
 
@@ -1069,12 +1089,47 @@ ol {
     height: 56px;
   }
 
+  .section-title {
+    font-size: var(--text-4xl);
+    text-align: center;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
   .hero {
-    padding: var(--space-10) 0;
+    padding: var(--space-12) 0;
   }
 
   .hero-title {
     font-size: clamp(2.5rem, 1.8rem + 3.25vw, 3.75rem);
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-6);
+    justify-content: flex-start;
+  }
+
+  .hero-stat+.hero-stat {
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: var(--space-6);
+  }
+
+  .hero-stat {
+    padding: var(--space-4) 0;
+  }
+
+  .hero-stat-number {
+    font-size: 2.25rem;
+  }
+
+  .problem-section {
+    padding: var(--space-20) 0;
   }
 
   .problem-grid {
@@ -1091,20 +1146,44 @@ ol {
     margin-bottom: 0;
   }
 
+  .products-section {
+    padding: var(--space-20) 0;
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-section {
+    padding: var(--space-20) 0;
   }
 
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .branches-section {
+    padding: var(--space-20) 0;
+  }
+
   .branch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quote-section {
+    padding: var(--space-20) 0;
+  }
+
+  .quote-form {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .form-group-full {
     grid-column: 1 / -1;
+  }
+
+  .faq-section {
+    padding: var(--space-20) 0;
   }
 
   .footer-inner {
@@ -1122,9 +1201,15 @@ ol {
    ================================================================ */
 
 @media (min-width: 1024px) {
+  :root {
+    --container-padding: var(--space-10);
+  }
 
-  /* Nav: horizontal */
   .menu-toggle {
+    display: none;
+  }
+
+  .nav-overlay {
     display: none;
   }
 
@@ -1152,9 +1237,12 @@ ol {
     display: inline-flex;
   }
 
-  /* Hero: two columns */
+  .section-title {
+    font-size: var(--text-4xl);
+  }
+
   .hero {
-    padding: var(--space-10) 0;
+    padding: var(--space-16) 0;
   }
 
   .hero-content {
@@ -1168,42 +1256,40 @@ ol {
   }
 
   .hero-stats {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 0 0 35%;
   }
 
-  /* Quote: two columns */
-  .quote-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
-    align-items: start;
+  .hero-stat+.hero-stat {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 0;
   }
 
-  .quote-info {
-    margin-bottom: 0;
+  .hero-stat {
+    padding: var(--space-6) 0;
   }
 
-  .quote-form {
-    grid-template-columns: repeat(2, 1fr);
-    padding: var(--space-8);
+  .hero-stat-number {
+    font-size: 3rem;
   }
 
-  /* FAQ: two columns */
-  .faq-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
-    align-items: start;
+  .problem-section,
+  .products-section,
+  .features-section,
+  .branches-section,
+  .quote-section,
+  .faq-section {
+    padding: var(--space-24) 0;
   }
 
-  .faq-info {
-    margin-bottom: 0;
+  .section-title,
+  .section-subtitle {
+    text-align: left;
+    margin-inline: 0;
   }
 
-  /* Grids at full */
   .problem-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1218,6 +1304,32 @@ ol {
 
   .branch-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quote-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .quote-info {
+    margin-bottom: 0;
+  }
+
+  .quote-form {
+    padding: var(--space-8);
+  }
+
+  .faq-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .faq-info {
+    margin-bottom: 0;
   }
 
   .footer-inner {
