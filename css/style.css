@@ -1,10 +1,10 @@
 /* ================================================================
-   MotorSensor — Premium Automotive Landing
-   Dark, precise, red accents — HRE / Brembo reference
-   Mobile first · Flexbox nav · CSS Grid products & branches
+   MotorSensor — Landing Page Automotriz
+   Estética oscura con acentos rojos — referencia HRE / Brembo
+   Mobile first · Flexbox en navegación · CSS Grid en productos y sucursales
    ================================================================ */
 
-/* ===== RESET ===== */
+/* ===== RESET — Normalización base para consistencia entre navegadores ===== */
 
 *,
 *::before,
@@ -47,7 +47,7 @@ ol {
   list-style: none;
 }
 
-/* ===== ACCESSIBILITY ===== */
+/* ===== ACCESIBILIDAD — Skip link y focus visible para navegación por teclado ===== */
 
 .skip-link {
   position: absolute;
@@ -71,7 +71,7 @@ ol {
   outline-offset: 2px;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== CONTENEDOR — Ancho máximo centralizado con padding responsive ===== */
 
 .container {
   width: 100%;
@@ -80,7 +80,7 @@ ol {
   padding-inline: var(--container-padding);
 }
 
-/* ===== BUTTONS ===== */
+/* ===== BOTONES — Sistema de variantes: primario (CTA), secundario y WhatsApp ===== */
 
 .btn {
   display: inline-flex;
@@ -151,7 +151,7 @@ ol {
   transform: translateY(-2px);
 }
 
-/* ===== SECTION PATTERN: Badge + Title + Subtitle ===== */
+/* ===== PATRÓN DE SECCIÓN — Título + subtítulo reutilizable en todas las secciones ===== */
 
 .section-title {
   font-family: var(--font-display);
@@ -179,7 +179,7 @@ ol {
 }
 
 /* ================================================================
-   HEADER — Sticky glass, Flexbox
+   HEADER — Sticky con efecto glass (backdrop-filter), layout Flexbox
    ================================================================ */
 
 .site-header {
@@ -282,7 +282,7 @@ ol {
   display: none;
 }
 
-/* ===== THEME TOGGLE ===== */
+/* ===== TOGGLE DE TEMA — Botón circular que alterna iconos sol/luna ===== */
 
 .theme-toggle {
   background: none;
@@ -413,7 +413,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   HERO — Radial glow, two-column on desktop
+   HERO — Una columna en móvil, dos columnas (texto + stats) en desktop
    ================================================================ */
 
 .hero {
@@ -477,7 +477,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   PROBLEMA / SOLUCIÓN — #1a1a1a
+   PROBLEMA / SOLUCIÓN — Tarjetas de síntomas + bloque de llamado a acción
    ================================================================ */
 
 .problem-section {
@@ -549,7 +549,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   PRODUCTOS — #111111, CSS Grid, image cards
+   PRODUCTOS — CSS Grid responsive: 1 col → 2 col → 4 col
    ================================================================ */
 
 .products-section {
@@ -600,7 +600,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   DIFERENCIADORES — #161616
+   DIFERENCIADORES — Cuatro tarjetas con icono, mismo patrón que problemas
    ================================================================ */
 
 .features-section {
@@ -655,7 +655,8 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   MARCAS — Chips pill
+   MARCAS — Marquee CSS puro con mask-image para desvanecimiento lateral
+   Los logos se duplican en el HTML para lograr el loop infinito sin JS
    ================================================================ */
 
 .brands-section {
@@ -739,7 +740,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   SUCURSALES — #1a1a1a, CSS Grid
+   SUCURSALES — CSS Grid con iframe de Google Maps embebido por tarjeta
    ================================================================ */
 
 .branches-section {
@@ -793,7 +794,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   COTIZACIÓN — Two-column layout on desktop
+   COTIZACIÓN — Info de contacto + formulario, dos columnas en desktop
    ================================================================ */
 
 .quote-section {
@@ -873,7 +874,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   FAQ — Two-column on desktop, accordion right
+   FAQ — Acordeón con <details>/<summary>, indicador +/− via CSS
    ================================================================ */
 
 .faq-section {
@@ -955,7 +956,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   FOOTER — #0d0d0d deepest
+   FOOTER — Nivel más oscuro de la jerarquía de superficies
    ================================================================ */
 
 .site-footer {
@@ -1195,7 +1196,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   MOBILE MENU OVERLAY
+   OVERLAY DEL MENÚ MÓVIL — Fondo semitransparente que cierra el menú al tocarlo
    ================================================================ */
 
 .nav-overlay {
@@ -1214,7 +1215,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   TABLET — 768px
+   TABLET (768px) — Grids a 2 columnas, stats en fila, textos centrados
    ================================================================ */
 
 @media (min-width: 768px) {
@@ -1334,7 +1335,7 @@ body.light-mode .quote-contact-list li {
 }
 
 /* ================================================================
-   DESKTOP — 1024px
+   DESKTOP (1024px) — Nav horizontal, grids a 3-4 columnas, layouts de dos paneles
    ================================================================ */
 
 @media (min-width: 1024px) {

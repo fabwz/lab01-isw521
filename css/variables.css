@@ -1,15 +1,16 @@
+/* Tokens de diseño centralizados — permite cambiar el look global desde un solo archivo */
 :root {
-  /* === Brand === */
+  /* === Marca — Rojo MotorSensor como acento principal === */
   --color-primary: #E5392B;
   --color-primary-hover: #C62E21;
   --color-primary-soft: rgba(229, 57, 43, 0.15);
 
-  /* === Surfaces (per-section depth) === */
+  /* === Superficies — Tres niveles de profundidad para jerarquía visual entre secciones === */
   --color-dark: #111111;
   --color-dark-2: #1E1E1E;
   --color-dark-3: #1a1a1a;
 
-  /* === Neutrals === */
+  /* === Neutros y estados === */
   --color-gray: #8B919A;
   --color-gray-light: #B0B7C3;
   --color-light: #F7F7F7;
@@ -18,13 +19,13 @@
   --color-success-hover: #15803D;
   --color-success-glow: rgba(22, 163, 74, 0.4);
 
-  /* === Borders (always rgba) === */
+  /* === Bordes — rgba para transparencia sobre fondos oscuros y claros === */
   --border-card: 1px solid rgba(255, 255, 255, 0.06);
   --border-card-hover: 1px solid rgba(255, 255, 255, 0.12);
   --border-subtle: 1px solid rgba(255, 255, 255, 0.06);
   --border-input: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* === Typography === */
+  /* === Tipografía — Escalas fluid con clamp() para responsive sin breakpoints === */
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
 
@@ -47,7 +48,7 @@
   --weight-bold: 700;
   --weight-extrabold: 800;
 
-  /* === Spacing (base 4px) === */
+  /* === Espaciado — Escala de 4px en rem para consistencia === */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -61,30 +62,30 @@
   --space-20: 5rem;
   --space-24: 6rem;
 
-  /* === Radii (technical, not bubbly) === */
+  /* === Radios — Estilo técnico-automotriz, bordes sutiles === */
   --radius-xs: 4px;
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-full: 9999px;
 
-  /* === Shadows === */
+  /* === Sombras === */
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.55);
   --shadow-float: 0 4px 20px rgba(22, 163, 74, 0.4);
 
-  /* === Transitions === */
+  /* === Transiciones === */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
 
-  /* === Layout === */
+  /* === Layout general === */
   --container-max: 1200px;
   --container-padding: var(--space-5);
   --header-height: 72px;
 }
 
-/* === Light Mode === */
+/* === Modo claro — Sobreescribe tokens oscuros invirtiendo superficies y texto === */
 body.light-mode {
   --color-dark: #FFFFFF;
   --color-dark-2: #FFFFFF;

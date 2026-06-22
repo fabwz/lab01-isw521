@@ -1,4 +1,4 @@
-// Apply saved theme before DOM is fully loaded to prevent flash
+// Se ejecuta antes del DOMContentLoaded para evitar el flash de tema incorrecto (FOIT)
 (function () {
   var saved = localStorage.getItem('theme');
   if (saved === 'light') {
@@ -7,7 +7,7 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Theme toggle
+  // Toggle de tema — persiste en localStorage para recordar preferencia entre sesiones
   var themeToggle = document.querySelector('.theme-toggle');
   if (themeToggle) {
     function updateToggle() {
@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Initialize Lucide icons
+  // Lucide reemplaza los placeholders data-lucide por SVGs inline
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }
 
-  // Mobile menu toggle
+  // Menú móvil — el overlay se crea dinámicamente para no ensuciar el HTML
   var menuToggle = document.querySelector('.menu-toggle');
   var mainNav = document.querySelector('.main-nav');
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Quote form submission
+  // Formulario de cotización — arma un mensaje con los datos del vehículo y abre WhatsApp
   var quoteForm = document.getElementById('quote-form');
   if (quoteForm) {
     quoteForm.addEventListener('submit', function (e) {
@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
+      // Se construye el texto pre-armado para que el asesor reciba toda la info de una vez
       var text = 'Hola, soy ' + name + ' (' + phone + '). '
         + 'Tengo un ' + brand + ' ' + model + ' ' + year + '. '
         + 'Consulta: ' + message + '. '
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var url = 'https://wa.me/' + branch + '?text=' + encodeURIComponent(text);
 
+      // Guarda la última cotización en localStorage (requisito de Web Storage del laboratorio)
       var formData = new FormData(quoteForm);
       var data = {};
       formData.forEach(function (value, key) {
@@ -103,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // FAQ accordion accessibility
+  // FAQ — Agrega aria-expanded y aria-controls a cada <details> para lectores de pantalla
   document.querySelectorAll('.faq-item').forEach(function (item, index) {
     var summary = item.querySelector('.faq-question');
     var answer = item.querySelector('.faq-answer');
@@ -116,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Restore form submitted state
+  // Limpieza de flag temporal de envío (previene falsos positivos al recargar)
   if (localStorage.getItem('motorsensor-form-submitted') === 'true') {
     localStorage.removeItem('motorsensor-form-submitted');
   }
