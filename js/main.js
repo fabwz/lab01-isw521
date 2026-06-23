@@ -7,26 +7,68 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Toggle de tema — persiste en localStorage para recordar preferencia entre sesiones
-  var themeToggle = document.querySelector('.theme-toggle');
-  if (themeToggle) {
-    function updateToggle() {
-      var isLight = document.body.classList.contains('light-mode');
-      themeToggle.setAttribute('aria-label', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
-    }
-    updateToggle();
+  // Toggle de tema — ahora integrado en el panel de accesibilidad
+  var themeToggle = document.getElementById('a11y-theme-toggle');
+  var themeLabel = document.getElementById('a11y-theme-label');
 
+  function updateThemeToggle() {
+    var isLight = document.body.classList.contains('light-mode');
+    if (themeLabel) themeLabel.textContent = isLight ? 'Modo claro' : 'Modo oscuro';
+    if (themeToggle) themeToggle.setAttribute('aria-label', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
+  }
+  updateThemeToggle();
+
+  if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       document.body.classList.toggle('light-mode');
       var isLight = document.body.classList.contains('light-mode');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
-      updateToggle();
+      updateThemeToggle();
     });
   }
 
   // Lucide reemplaza los placeholders data-lucide por SVGs inline
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
+  }
+
+  // Panel de accesibilidad — tamaño de texto y brillo con persistencia en localStorage
+  var a11yToggle = document.querySelector('.a11y-toggle');
+  var a11yPanel = document.getElementById('a11y-panel');
+
+  if (a11yToggle && a11yPanel) {
+    var fontSize = parseInt(localStorage.getItem('fontSize'), 10) || 16;
+    var brightness = parseFloat(localStorage.getItem('brightness')) || 1;
+
+    function applyA11y() {
+      fontSize = Math.max(14, Math.min(22, fontSize));
+      brightness = Math.max(0.7, Math.min(1.3, parseFloat(brightness.toFixed(2))));
+      document.documentElement.style.fontSize = fontSize + 'px';
+      document.getElementById('page-wrapper').style.filter = 'brightness(' + brightness + ')';
+      document.getElementById('a11y-fontsize-value').textContent = fontSize + 'px';
+      document.getElementById('a11y-brightness-value').textContent = Math.round(brightness * 100) + '%';
+      localStorage.setItem('fontSize', fontSize);
+      localStorage.setItem('brightness', brightness);
+    }
+
+    applyA11y();
+
+    a11yToggle.addEventListener('click', function () {
+      var isOpen = a11yPanel.hidden;
+      a11yPanel.hidden = !isOpen;
+      a11yToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    a11yPanel.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      var action = btn.getAttribute('data-action');
+      if (action === 'fontSize-increase') fontSize += 2;
+      else if (action === 'fontSize-decrease') fontSize -= 2;
+      else if (action === 'brightness-increase') brightness += 0.1;
+      else if (action === 'brightness-decrease') brightness -= 0.1;
+      applyA11y();
+    });
   }
 
   // Menú móvil — el overlay se crea dinámicamente para no ensuciar el HTML
