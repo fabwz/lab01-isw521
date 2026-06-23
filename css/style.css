@@ -940,7 +940,7 @@ body.light-mode .quote-contact-list li {
   font-weight: var(--weight-semibold);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-gray);
+  color: var(--color-primary);
   margin-bottom: var(--space-4);
 }
 
