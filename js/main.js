@@ -331,22 +331,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Scroll spy — resalta el enlace del navbar según la sección visible
   var navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-  var sections = [];
+  var sectionEls = [];
   navLinks.forEach(function (link) {
     var id = link.getAttribute('href').substring(1);
     var section = document.getElementById(id);
-    if (section) sections.push({ id: id, el: section });
+    if (section) sectionEls.push(section);
   });
+
+  var heroEl = document.getElementById('hero');
+
+  function clearActive() {
+    navLinks.forEach(function (link) { link.classList.remove('nav-active'); });
+  }
 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        navLinks.forEach(function (link) {
-          link.classList.toggle('nav-active', link.getAttribute('href') === '#' + entry.target.id);
-        });
+        if (entry.target.id === 'hero') {
+          clearActive();
+        } else {
+          navLinks.forEach(function (link) {
+            link.classList.toggle('nav-active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
       }
     });
   }, { rootMargin: '-50% 0px -50% 0px' });
 
-  sections.forEach(function (s) { observer.observe(s.el); });
+  if (heroEl) observer.observe(heroEl);
+  sectionEls.forEach(function (el) { observer.observe(el); });
 });
