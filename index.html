@@ -20,7 +20,7 @@
 
 <body>
 
-  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+  <a href="#main-content" class="skip-link" data-i18n="skipLink">Saltar al contenido</a>
 
   <div class="page-wrapper" id="page-wrapper">
     <!-- ===== HEADER ===== -->
@@ -40,16 +40,16 @@
 
         <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
           <ul class="nav-list">
-            <li><a href="#problema" class="nav-link">Problemas</a></li>
-            <li><a href="#productos" class="nav-link">Productos</a></li>
-            <li><a href="#diferenciadores" class="nav-link">Por qué elegirnos</a></li>
-            <li><a href="#marcas" class="nav-link">Marcas</a></li>
-            <li><a href="#sucursales" class="nav-link">Sucursales</a></li>
-            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="#problema" class="nav-link" data-i18n="navProblems">Problemas</a></li>
+            <li><a href="#productos" class="nav-link" data-i18n="navProducts">Productos</a></li>
+            <li><a href="#diferenciadores" class="nav-link" data-i18n="navWhy">Por qué elegirnos</a></li>
+            <li><a href="#marcas" class="nav-link" data-i18n="navBrands">Marcas</a></li>
+            <li><a href="#sucursales" class="nav-link" data-i18n="navBranches">Sucursales</a></li>
+            <li><a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a></li>
           </ul>
         </nav>
 
-        <a href="#contacto" class="btn btn-primary header-cta">Contactar</a>
+        <a href="#contacto" class="btn btn-primary header-cta" data-i18n="navContact">Contactar</a>
       </div>
     </header>
 
@@ -58,35 +58,35 @@
       <section class="hero" id="hero">
         <div class="container hero-content">
           <div class="hero-text">
-            <h1 class="hero-title">¿Check Engine o pérdida de potencia? <span class="text-accent">Te ayudamos a
+            <h1 class="hero-title" data-i18n-html="heroTitle">¿Check Engine o pérdida de potencia? <span class="text-accent">Te ayudamos a
                 identificar la pieza correcta.</span></h1>
-            <p class="hero-subtitle">Sensores, bobinas y motores nuevos con diagnóstico gratuito, asesoría técnica
+            <p class="hero-subtitle" data-i18n="heroSubtitle">Sensores, bobinas y motores nuevos con diagnóstico gratuito, asesoría técnica
               especializada y envíos a todo Costa Rica.</p>
             <div class="hero-actions">
               <a href="#sucursales" class="btn btn-primary hero-cta">
                 <i data-lucide="message-circle" aria-hidden="true"></i>
-                Hablar con un asesor
+                <span data-i18n="heroCta">Hablar con un asesor</span>
               </a>
-              <a href="#productos" class="btn btn-secondary">Ver productos →</a>
+              <a href="#productos" class="btn btn-secondary" data-i18n="heroCtaSecondary">Ver productos →</a>
             </div>
             <div class="hero-trust">
-              <span class="trust-badge">Diagnóstico gratuito</span>
-              <span class="trust-badge">Asesoría técnica real</span>
-              <span class="trust-badge">Envío nacional</span>
+              <span class="trust-badge" data-i18n="trustDiag">Diagnóstico gratuito</span>
+              <span class="trust-badge" data-i18n="trustAdvice">Asesoría técnica real</span>
+              <span class="trust-badge" data-i18n="trustShipping">Envío nacional</span>
             </div>
           </div>
           <div class="hero-stats">
             <div class="hero-stat">
               <span class="hero-stat-number">+3000</span>
-              <span class="hero-stat-label">Clientes atendidos</span>
+              <span class="hero-stat-label" data-i18n="statClients">Clientes atendidos</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-number">3</span>
-              <span class="hero-stat-label">Sucursales en Costa Rica</span>
+              <span class="hero-stat-label" data-i18n="statBranches">Sucursales en Costa Rica</span>
             </div>
             <div class="hero-stat">
               <span class="hero-stat-number">+6</span>
-              <span class="hero-stat-label">Años de experiencia</span>
+              <span class="hero-stat-label" data-i18n="statYears">Años de experiencia</span>
             </div>
           </div>
         </div>
@@ -95,37 +95,37 @@
       <!-- ===== PROBLEMA / SOLUCIÓN — Síntomas comunes que conectan con la necesidad del cliente ===== -->
       <section class="problem-section" id="problema">
         <div class="container">
-          <h2 class="section-title">¿Tu vehículo presenta alguno de estos síntomas?</h2>
-          <p class="section-subtitle">Estos problemas son más comunes de lo que pensás y pueden requerir diagnóstico
+          <h2 class="section-title" data-i18n="problemTitle">¿Tu vehículo presenta alguno de estos síntomas?</h2>
+          <p class="section-subtitle" data-i18n="problemSubtitle">Estos problemas son más comunes de lo que pensás y pueden requerir diagnóstico
             técnico.</p>
 
           <div class="problem-grid">
             <article class="problem-card">
               <span class="problem-icon" aria-hidden="true"><i data-lucide="alert-triangle"></i></span>
-              <h3>Check Engine encendido</h3>
-              <p>La luz de Check Engine puede indicar fallas en sensores, bobinas o el sistema de inyección.</p>
+              <h3 data-i18n="prob1Title">Check Engine encendido</h3>
+              <p data-i18n="prob1Desc">La luz de Check Engine puede indicar fallas en sensores, bobinas o el sistema de inyección.</p>
             </article>
             <article class="problem-card">
               <span class="problem-icon" aria-hidden="true"><i data-lucide="zap"></i></span>
-              <h3>Pérdida de potencia</h3>
-              <p>El vehículo no acelera como antes, tiembla o pierde fuerza en pendientes.</p>
+              <h3 data-i18n="prob2Title">Pérdida de potencia</h3>
+              <p data-i18n="prob2Desc">El vehículo no acelera como antes, tiembla o pierde fuerza en pendientes.</p>
             </article>
             <article class="problem-card">
               <span class="problem-icon" aria-hidden="true"><i data-lucide="fuel"></i></span>
-              <h3>Alto consumo de combustible</h3>
-              <p>Un sensor defectuoso puede causar que el motor consuma más combustible del necesario.</p>
+              <h3 data-i18n="prob3Title">Alto consumo de combustible</h3>
+              <p data-i18n="prob3Desc">Un sensor defectuoso puede causar que el motor consuma más combustible del necesario.</p>
             </article>
             <article class="problem-card">
               <span class="problem-icon" aria-hidden="true"><i data-lucide="power"></i></span>
-              <h3>Fallas de encendido</h3>
-              <p>El motor no arranca correctamente o presenta encendido irregular y vibraciones.</p>
+              <h3 data-i18n="prob4Title">Fallas de encendido</h3>
+              <p data-i18n="prob4Desc">El motor no arranca correctamente o presenta encendido irregular y vibraciones.</p>
             </article>
           </div>
 
           <div class="problem-solution">
-            <p>En MotorSensor te ayudamos a <strong>identificar la falla exacta</strong> y encontrar la pieza correcta
+            <p data-i18n-html="problemSolution">En MotorSensor te ayudamos a <strong>identificar la falla exacta</strong> y encontrar la pieza correcta
               para tu marca y modelo.</p>
-            <a href="#contacto" class="btn btn-primary">Describir mi problema</a>
+            <a href="#contacto" class="btn btn-primary" data-i18n="problemCta">Describir mi problema</a>
           </div>
         </div>
       </section>
@@ -133,38 +133,38 @@
       <!-- ===== PRODUCTOS — Cuadrícula CSS Grid con las categorías principales ===== -->
       <section class="products-section" id="productos">
         <div class="container">
-          <h2 class="section-title">Nuestros productos</h2>
-          <p class="section-subtitle">Repuestos originales y genéricos certificados para múltiples marcas y modelos.</p>
+          <h2 class="section-title" data-i18n="productsTitle">Nuestros productos</h2>
+          <p class="section-subtitle" data-i18n="productsSubtitle">Repuestos originales y genéricos certificados para múltiples marcas y modelos.</p>
 
           <div class="product-grid">
             <article class="product-card">
               <img src="assets/images/products/SensorMAF.png" alt="Sensor MAF — sensor de flujo de aire para vehículos"
                 width="300" height="300" loading="lazy">
-              <h3>Sensores automotrices</h3>
-              <p>Oxígeno, CKP, CMP, MAF, MAP, ABS, TPS, temperatura y más.</p>
+              <h3 data-i18n="prod1Title">Sensores automotrices</h3>
+              <p data-i18n="prod1Desc">Oxígeno, CKP, CMP, MAF, MAP, ABS, TPS, temperatura y más.</p>
             </article>
             <article class="product-card">
               <img src="assets/images/products/BobinaEncendido.png" alt="Bobina de encendido automotriz" width="300"
                 height="300" loading="lazy">
-              <h3>Bobinas de encendido</h3>
-              <p>Bobinas individuales, en bloque, bujías y cables de alta tensión.</p>
+              <h3 data-i18n="prod2Title">Bobinas de encendido</h3>
+              <p data-i18n="prod2Desc">Bobinas individuales, en bloque, bujías y cables de alta tensión.</p>
             </article>
             <article class="product-card">
               <img src="assets/images/products/ValvulaPVC.png" alt="Válvula PCV — componente del sistema de inyección"
                 width="300" height="300" loading="lazy">
-              <h3>Sistema de inyección</h3>
-              <p>Inyectores de combustible y componentes electrónicos del sistema.</p>
+              <h3 data-i18n="prod3Title">Sistema de inyección</h3>
+              <p data-i18n="prod3Desc">Inyectores de combustible y componentes electrónicos del sistema.</p>
             </article>
             <article class="product-card">
               <img src="assets/images/products/Motor.png" alt="Motor nuevo de paquete con garantía de fábrica"
                 width="300" height="300" loading="lazy">
-              <h3>Motores completos</h3>
-              <p>Motores nuevos de paquete con garantía de fábrica.</p>
+              <h3 data-i18n="prod4Title">Motores completos</h3>
+              <p data-i18n="prod4Desc">Motores nuevos de paquete con garantía de fábrica.</p>
             </article>
           </div>
 
           <div class="section-cta">
-            <a href="#contacto" class="btn btn-primary">Cotizar
+            <a href="#contacto" class="btn btn-primary" data-i18n="productsCta">Cotizar
               repuesto</a>
           </div>
         </div>
@@ -173,30 +173,30 @@
       <!-- ===== DIFERENCIADORES — Ventajas competitivas frente a tiendas genéricas ===== -->
       <section class="features-section" id="diferenciadores">
         <div class="container">
-          <h2 class="section-title">¿Por qué elegir MotorSensor?</h2>
-          <p class="section-subtitle">No somos una tienda genérica de repuestos. Combinamos diagnóstico, asesoría y
+          <h2 class="section-title" data-i18n="featuresTitle">¿Por qué elegir MotorSensor?</h2>
+          <p class="section-subtitle" data-i18n="featuresSubtitle">No somos una tienda genérica de repuestos. Combinamos diagnóstico, asesoría y
             soluciones reales.</p>
 
           <div class="features-grid">
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="scan-line"></i></span>
-              <h3>Diagnóstico gratuito</h3>
-              <p>Escaneo computarizado sin costo al adquirir repuestos para identificar la falla exacta.</p>
+              <h3 data-i18n="feat1Title">Diagnóstico gratuito</h3>
+              <p data-i18n="feat1Desc">Escaneo computarizado sin costo al adquirir repuestos para identificar la falla exacta.</p>
             </article>
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="message-circle"></i></span>
-              <h3>Asesoría técnica</h3>
-              <p>Te orientamos para que comprés la pieza correcta según tu marca, modelo y síntomas.</p>
+              <h3 data-i18n="feat2Title">Asesoría técnica</h3>
+              <p data-i18n="feat2Desc">Te orientamos para que comprés la pieza correcta según tu marca, modelo y síntomas.</p>
             </article>
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="package"></i></span>
-              <h3>Envío nacional</h3>
-              <p>Enviamos repuestos a cualquier parte de Costa Rica.</p>
+              <h3 data-i18n="feat3Title">Envío nacional</h3>
+              <p data-i18n="feat3Desc">Enviamos repuestos a cualquier parte de Costa Rica.</p>
             </article>
             <article class="feature-card">
               <span class="feature-icon" aria-hidden="true"><i data-lucide="wallet"></i></span>
-              <h3>Opciones para todo presupuesto</h3>
-              <p>Alternativas originales y genéricas certificadas para que eligás según tus posibilidades.</p>
+              <h3 data-i18n="feat4Title">Opciones para todo presupuesto</h3>
+              <p data-i18n="feat4Desc">Alternativas originales y genéricas certificadas para que eligás según tus posibilidades.</p>
             </article>
           </div>
         </div>
@@ -205,8 +205,8 @@
       <!-- ===== MARCAS — Carrusel infinito (marquee CSS) con logos duplicados para efecto continuo ===== -->
       <section class="brands-section" id="marcas">
         <div class="container">
-          <h2 class="section-title">Marcas compatibles</h2>
-          <p class="section-subtitle">Trabajamos con repuestos para las marcas más populares en Costa Rica.</p>
+          <h2 class="section-title" data-i18n="brandsTitle">Marcas compatibles</h2>
+          <p class="section-subtitle" data-i18n="brandsSubtitle">Trabajamos con repuestos para las marcas más populares en Costa Rica.</p>
 
           <div class="marquee">
             <div class="marquee-track">
@@ -328,8 +328,8 @@
       <!-- ===== SUCURSALES — Tres puntos de atención con mapa embebido y WhatsApp directo (CSS Grid) ===== -->
       <section class="branches-section" id="sucursales">
         <div class="container">
-          <h2 class="section-title">Nuestras sucursales</h2>
-          <p class="section-subtitle">Tres puntos de atención con asesoría técnica presencial.</p>
+          <h2 class="section-title" data-i18n="branchesTitle">Nuestras sucursales</h2>
+          <p class="section-subtitle" data-i18n="branchesSubtitle">Tres puntos de atención con asesoría técnica presencial.</p>
 
           <div class="branch-grid">
             <article class="branch-card">
@@ -340,9 +340,9 @@
               <h3>Ciudad Quesada</h3>
               <p class="branch-location">Ciudad Quesada, San Carlos, Alajuela</p>
               <div class="branch-hours">
-                <p>Lun–Vie: 8:00 AM – 5:00 PM</p>
-                <p>Sáb: 8:00 AM – 12:00 PM</p>
-                <p>Dom: Cerrado</p>
+                <p data-i18n="hoursWeekday">Lun–Vie: 8:00 AM – 5:00 PM</p>
+                <p data-i18n="hoursSat">Sáb: 8:00 AM – 12:00 PM</p>
+                <p data-i18n="hoursSun">Dom: Cerrado</p>
               </div>
               <a href="https://wa.me/50684478000" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                 WhatsApp San Carlos
@@ -357,9 +357,9 @@
               <h3>Pérez Zeledón</h3>
               <p class="branch-location">Palmares, Pérez Zeledón, San José</p>
               <div class="branch-hours">
-                <p>Lun–Vie: 8:00 AM – 5:00 PM</p>
-                <p>Sáb: 8:00 AM – 12:00 PM</p>
-                <p>Dom: Cerrado</p>
+                <p data-i18n="hoursWeekday">Lun–Vie: 8:00 AM – 5:00 PM</p>
+                <p data-i18n="hoursSat">Sáb: 8:00 AM – 12:00 PM</p>
+                <p data-i18n="hoursSun">Dom: Cerrado</p>
               </div>
               <a href="https://wa.me/50684408000" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                 WhatsApp Pérez Zeledón
@@ -374,9 +374,9 @@
               <h3>Naranjo</h3>
               <p class="branch-location">Naranjo, Alajuela</p>
               <div class="branch-hours">
-                <p>Lun–Vie: 8:00 AM – 5:00 PM</p>
-                <p>Sáb: 8:00 AM – 12:00 PM</p>
-                <p>Dom: Cerrado</p>
+                <p data-i18n="hoursWeekday">Lun–Vie: 8:00 AM – 5:00 PM</p>
+                <p data-i18n="hoursSat">Sáb: 8:00 AM – 12:00 PM</p>
+                <p data-i18n="hoursSun">Dom: Cerrado</p>
               </div>
               <a href="https://wa.me/50684438000" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                 WhatsApp Naranjo
@@ -389,8 +389,8 @@
       <!-- ===== COTIZACIÓN — Formulario que redirige a WhatsApp con datos del vehículo pre-armados ===== -->
       <section class="quote-section" id="contacto">
         <div class="container">
-          <h2 class="section-title">Cotizá tu <span class="text-accent">repuesto</span></h2>
-          <p class="section-subtitle">Completá el formulario y te contactamos con opciones compatibles para tu vehículo.
+          <h2 class="section-title" data-i18n-html="quoteTitle">Cotizá tu <span class="text-accent">repuesto</span></h2>
+          <p class="section-subtitle" data-i18n="quoteSubtitle">Completá el formulario y te contactamos con opciones compatibles para tu vehículo.
           </p>
         </div>
         <div class="container quote-wrapper">
@@ -417,7 +417,7 @@
                 <a href="mailto:motorsensorcr@gmail.com">motorsensorcr@gmail.com</a>
               </li>
             </ul>
-            <h3 class="quote-social-heading">Síguenos</h3>
+            <h3 class="quote-social-heading" data-i18n="followUs">Síguenos</h3>
             <ul class="quote-contact-list quote-social-list">
               <li>
                 <svg class="quote-contact-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20"
@@ -454,40 +454,40 @@
 
           <form class="quote-form" id="quote-form" novalidate>
             <div class="form-group">
-              <label for="quote-name">Nombre</label>
+              <label for="quote-name" data-i18n="formName">Nombre</label>
               <input type="text" id="quote-name" name="name" required autocomplete="name">
             </div>
             <div class="form-group">
-              <label for="quote-phone">Teléfono o WhatsApp</label>
+              <label for="quote-phone" data-i18n="formPhone">Teléfono o WhatsApp</label>
               <input type="tel" id="quote-phone" name="phone" required autocomplete="tel">
             </div>
             <div class="form-group">
-              <label for="quote-brand">Marca del vehículo</label>
+              <label for="quote-brand" data-i18n="formBrand">Marca del vehículo</label>
               <input type="text" id="quote-brand" name="vehicle-brand" required>
             </div>
             <div class="form-group">
-              <label for="quote-model">Modelo del vehículo</label>
+              <label for="quote-model" data-i18n="formModel">Modelo del vehículo</label>
               <input type="text" id="quote-model" name="vehicle-model" required>
             </div>
             <div class="form-group">
-              <label for="quote-year">Año del vehículo</label>
+              <label for="quote-year" data-i18n="formYear">Año del vehículo</label>
               <input type="number" id="quote-year" name="vehicle-year" min="1990" max="2026" required>
             </div>
             <div class="form-group form-group-full">
-              <label for="quote-message">Repuesto o problema que desea consultar</label>
+              <label for="quote-message" data-i18n="formMessage">Repuesto o problema que desea consultar</label>
               <textarea id="quote-message" name="message" rows="4" required></textarea>
             </div>
             <div class="form-group form-group-full">
-              <label for="quote-branch">Sucursal de preferencia</label>
+              <label for="quote-branch" data-i18n="formBranch">Sucursal de preferencia</label>
               <select id="quote-branch" name="branch" required>
-                <option value="">Seleccionar sucursal</option>
+                <option value="" data-i18n="formBranchDefault">Seleccionar sucursal</option>
                 <option value="50684478000">San Carlos</option>
                 <option value="50684438000">Naranjo</option>
                 <option value="50684408000">Pérez Zeledón</option>
               </select>
             </div>
             <div class="form-group form-group-full">
-              <button type="submit" class="btn btn-primary">Enviar cotización</button>
+              <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Enviar cotización</button>
             </div>
           </form>
         </div>
@@ -497,16 +497,16 @@
       <section class="faq-section" id="faq">
         <div class="container faq-wrapper">
           <div class="faq-info">
-            <h2 class="section-title">Preguntas <span class="text-accent">frecuentes</span></h2>
-            <p class="section-subtitle">Resolvé tus dudas antes de contactarnos.</p>
-            <a href="#contacto" class="btn btn-primary">Hablar con un asesor</a>
+            <h2 class="section-title" data-i18n-html="faqTitle">Preguntas <span class="text-accent">frecuentes</span></h2>
+            <p class="section-subtitle" data-i18n="faqSubtitle">Resolvé tus dudas antes de contactarnos.</p>
+            <a href="#contacto" class="btn btn-primary" data-i18n="faqCta">Hablar con un asesor</a>
           </div>
 
           <div class="faq-list">
             <details class="faq-item">
-              <summary class="faq-question">¿Cómo sé si la pieza es compatible con mi vehículo?</summary>
+              <summary class="faq-question" data-i18n="faq1Q">¿Cómo sé si la pieza es compatible con mi vehículo?</summary>
               <div class="faq-answer">
-                <p>Nuestro equipo de asesoría técnica verifica la compatibilidad según la marca, modelo y año de tu
+                <p data-i18n="faq1A">Nuestro equipo de asesoría técnica verifica la compatibilidad según la marca, modelo y año de tu
                   vehículo antes de realizar la venta. Solo necesitás escribirnos por WhatsApp con los datos de tu
                   carro.
                 </p>
@@ -514,34 +514,34 @@
             </details>
 
             <details class="faq-item">
-              <summary class="faq-question">¿Hacen envíos a mi zona?</summary>
+              <summary class="faq-question" data-i18n="faq2Q">¿Hacen envíos a mi zona?</summary>
               <div class="faq-answer">
-                <p>Sí, realizamos envíos a todo el territorio nacional de Costa Rica. Consultá por WhatsApp para conocer
+                <p data-i18n="faq2A">Sí, realizamos envíos a todo el territorio nacional de Costa Rica. Consultá por WhatsApp para conocer
                   tiempos y costos de envío a tu ubicación.</p>
               </div>
             </details>
 
             <details class="faq-item">
-              <summary class="faq-question">¿El diagnóstico tiene costo?</summary>
+              <summary class="faq-question" data-i18n="faq3Q">¿El diagnóstico tiene costo?</summary>
               <div class="faq-answer">
-                <p>El escaneo y diagnóstico computarizado es gratuito al adquirir repuestos en cualquiera de nuestras
+                <p data-i18n="faq3A">El escaneo y diagnóstico computarizado es gratuito al adquirir repuestos en cualquiera de nuestras
                   sucursales.</p>
               </div>
             </details>
 
             <details class="faq-item">
-              <summary class="faq-question">¿Qué diferencia hay entre opciones originales y genéricas?</summary>
+              <summary class="faq-question" data-i18n="faq4Q">¿Qué diferencia hay entre opciones originales y genéricas?</summary>
               <div class="faq-answer">
-                <p>Los repuestos originales son fabricados por la marca del vehículo, mientras que los genéricos
+                <p data-i18n="faq4A">Los repuestos originales son fabricados por la marca del vehículo, mientras que los genéricos
                   certificados son de marcas alternas con estándares de calidad comprobados. Ambas opciones tienen
                   garantía y nuestro equipo te asesora para elegir la mejor según tu presupuesto.</p>
               </div>
             </details>
 
             <details class="faq-item">
-              <summary class="faq-question">¿Cómo puedo contactar la sucursal más cercana?</summary>
+              <summary class="faq-question" data-i18n="faq5Q">¿Cómo puedo contactar la sucursal más cercana?</summary>
               <div class="faq-answer">
-                <p>Podés escribirnos directamente por WhatsApp a la sucursal de tu preferencia: San Carlos (+506
+                <p data-i18n-html="faq5A">Podés escribirnos directamente por WhatsApp a la sucursal de tu preferencia: San Carlos (+506
                   8447-8000), Pérez Zeledón (+506 8440-8000) o Naranjo (+506 8443-8000). También podés enviarnos un
                   correo
                   a <a href="mailto:motorsensorcr@gmail.com">motorsensorcr@gmail.com</a>.</p>
@@ -557,11 +557,11 @@
       <div class="container footer-inner">
         <div class="footer-brand">
           <img src="assets/images/brand/LogoMotorSensor.png" alt="MotorSensor" width="150" height="40" loading="lazy">
-          <p>Repuestos automotrices con diagnóstico gratuito, asesoría técnica y envío a todo Costa Rica.</p>
+          <p data-i18n="footerDesc">Repuestos automotrices con diagnóstico gratuito, asesoría técnica y envío a todo Costa Rica.</p>
         </div>
 
         <div class="footer-contact">
-          <h3>Contacto</h3>
+          <h3 data-i18n="footerContact">Contacto</h3>
           <ul>
             <li>
               <a href="mailto:motorsensorcr@gmail.com">motorsensorcr@gmail.com</a>
@@ -577,16 +577,16 @@
         </div>
 
         <div class="footer-hours">
-          <h3>Horarios</h3>
+          <h3 data-i18n="footerHours">Horarios</h3>
           <ul>
-            <li>Lun–Vie: 8:00 AM – 5:00 PM</li>
-            <li>Sáb: 8:00 AM – 12:00 PM</li>
-            <li>Dom: Cerrado</li>
+            <li data-i18n="hoursWeekday">Lun–Vie: 8:00 AM – 5:00 PM</li>
+            <li data-i18n="hoursSat">Sáb: 8:00 AM – 12:00 PM</li>
+            <li data-i18n="hoursSun">Dom: Cerrado</li>
           </ul>
         </div>
 
         <div class="footer-social">
-          <h3>Redes sociales</h3>
+          <h3 data-i18n="footerSocial">Redes sociales</h3>
           <ul class="social-links">
             <li>
               <a href="https://www.facebook.com/p/Motorsensor-100063665601663/" target="_blank"
@@ -627,7 +627,7 @@
 
       <div class="footer-bottom">
         <div class="container">
-          <p>&copy; 2026 MotorSensor. Todos los derechos reservados.</p>
+          <p data-i18n="footerCopy">&copy; 2026 MotorSensor. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
@@ -638,9 +638,9 @@
     <!-- Panel de accesibilidad (arriba del WhatsApp) -->
     <div class="a11y-widget">
       <div class="a11y-panel" id="a11y-panel" role="region" aria-label="Opciones de accesibilidad" hidden>
-        <p class="a11y-panel-title">Accesibilidad</p>
+        <p class="a11y-panel-title" data-i18n="a11yTitle">Accesibilidad</p>
         <div class="a11y-option">
-          <span class="a11y-option-label">Tamaño de texto</span>
+          <span class="a11y-option-label" data-i18n="a11yFontSize">Tamaño de texto</span>
           <div class="a11y-controls">
             <button type="button" class="a11y-btn" data-action="fontSize-decrease"
               aria-label="Reducir tamaño de texto">−</button>
@@ -650,7 +650,7 @@
           </div>
         </div>
         <div class="a11y-option">
-          <span class="a11y-option-label">Modo</span>
+          <span class="a11y-option-label" data-i18n="a11yMode">Modo</span>
           <div class="a11y-controls">
             <button type="button" class="a11y-theme-btn" id="a11y-theme-toggle" aria-label="Cambiar modo de color">
               <i data-lucide="moon" class="a11y-theme-icon a11y-theme-icon--dark" aria-hidden="true"></i>
@@ -660,13 +660,22 @@
           </div>
         </div>
         <div class="a11y-option">
-          <span class="a11y-option-label">Brillo</span>
+          <span class="a11y-option-label" data-i18n="a11yBrightness">Brillo</span>
           <div class="a11y-controls">
             <button type="button" class="a11y-btn" data-action="brightness-decrease"
               aria-label="Reducir brillo">−</button>
             <span class="a11y-value" id="a11y-brightness-value">100%</span>
             <button type="button" class="a11y-btn" data-action="brightness-increase"
               aria-label="Aumentar brillo">+</button>
+          </div>
+        </div>
+        <div class="a11y-option">
+          <span class="a11y-option-label" data-i18n="a11yLang">Idioma</span>
+          <div class="a11y-controls">
+            <button type="button" class="a11y-lang-btn" id="a11y-lang-toggle" aria-label="Cambiar idioma">
+              <i data-lucide="globe" class="a11y-lang-icon" aria-hidden="true"></i>
+              <span class="a11y-lang-label" id="a11y-lang-label">Español</span>
+            </button>
           </div>
         </div>
       </div>
