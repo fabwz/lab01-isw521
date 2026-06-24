@@ -269,6 +269,12 @@ document.addEventListener('DOMContentLoaded', function () {
     mainNav.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1024) {
+        closeMenu();
+      }
+    });
   }
 
   // Formulario de cotización — arma un mensaje con los datos del vehículo y abre WhatsApp
