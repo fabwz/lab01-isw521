@@ -360,4 +360,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (heroEl) observer.observe(heroEl);
   sectionEls.forEach(function (el) { observer.observe(el); });
+
+  // Scroll reveal — fade-in + slide-up una sola vez al entrar al viewport
+  var revealElements = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(function (el) { revealObserver.observe(el); });
+
+  // Contadores animados — cuenta desde 0 hasta el valor real con easing
+  var counterElements = document.querySelectorAll('[data-counter]');
+  var counterObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      counterObserver.unobserve(el);
+      var target = parseInt(el.getAttribute('data-counter'), 10);
+      var prefix = el.getAttribute('data-counter-prefix') || '';
+      var duration = 2000;
+      var start = performance.now();
+
+      function update(now) {
+        var elapsed = now - start;
+        var progress = Math.min(elapsed / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.round(eased * target);
+        el.textContent = (progress >= 1 ? prefix : '') + current;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+
+      requestAnimationFrame(update);
+    });
+  }, { threshold: 0.5 });
+
+  counterElements.forEach(function (el) { counterObserver.observe(el); });
 });

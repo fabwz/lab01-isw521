@@ -1452,6 +1452,21 @@ body.light-mode .a11y-toggle {
 }
 
 /* ================================================================
+   SCROLL REVEAL — Fade-in + slide-up al entrar al viewport
+   ================================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================================================
    TABLET (768px) — Grids a 2 columnas, stats en fila, textos centrados
    ================================================================ */
 
