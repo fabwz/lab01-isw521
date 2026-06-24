@@ -328,4 +328,25 @@ document.addEventListener('DOMContentLoaded', function () {
   if (localStorage.getItem('motorsensor-form-submitted') === 'true') {
     localStorage.removeItem('motorsensor-form-submitted');
   }
+
+  // Scroll spy — resalta el enlace del navbar según la sección visible
+  var navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  var sections = [];
+  navLinks.forEach(function (link) {
+    var id = link.getAttribute('href').substring(1);
+    var section = document.getElementById(id);
+    if (section) sections.push({ id: id, el: section });
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        navLinks.forEach(function (link) {
+          link.classList.toggle('nav-active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-50% 0px -50% 0px' });
+
+  sections.forEach(function (s) { observer.observe(s.el); });
 });

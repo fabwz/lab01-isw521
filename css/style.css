@@ -272,6 +272,10 @@ ol {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.nav-link.nav-active {
+  color: var(--color-primary);
+}
+
 .header-cta {
   display: none;
 }
