@@ -10,7 +10,7 @@ var translations = {
   es: {
     skipLink: 'Saltar al contenido',
     navProblems: 'Problemas', navProducts: 'Productos', navWhy: 'Por qué elegirnos',
-    navBrands: 'Marcas', navBranches: 'Sucursales', navFaq: 'FAQ', navContact: 'Contactar',
+    navBrands: 'Marcas', navBranches: 'Sucursales', navFaq: 'FAQ', navContactLink: 'Contacto', navContact: 'Contactar',
     heroTitle: '¿Check Engine o pérdida de potencia? <span class="text-accent">Te ayudamos a identificar la pieza correcta.</span>',
     heroSubtitle: 'Sensores, bobinas y motores nuevos con diagnóstico gratuito, asesoría técnica especializada y envíos a todo Costa Rica.',
     heroCta: 'Hablar con un asesor', heroCtaSecondary: 'Ver productos →',
@@ -72,7 +72,7 @@ var translations = {
   en: {
     skipLink: 'Skip to content',
     navProblems: 'Problems', navProducts: 'Products', navWhy: 'Why choose us',
-    navBrands: 'Brands', navBranches: 'Locations', navFaq: 'FAQ', navContact: 'Contact',
+    navBrands: 'Brands', navBranches: 'Locations', navFaq: 'FAQ', navContactLink: 'Contact', navContact: 'Contact',
     heroTitle: 'Check Engine or power loss? <span class="text-accent">We help you find the right part.</span>',
     heroSubtitle: 'New sensors, coils and engines with free diagnostics, specialized technical advice and shipping across Costa Rica.',
     heroCta: 'Talk to an advisor', heroCtaSecondary: 'View products →',
