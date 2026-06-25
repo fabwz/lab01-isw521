@@ -345,11 +345,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Limpieza de flag temporal de envío (previene falsos positivos al recargar)
-  if (localStorage.getItem('motorsensor-form-submitted') === 'true') {
-    localStorage.removeItem('motorsensor-form-submitted');
-  }
-
   // Scroll spy — resalta el enlace del navbar según la sección visible
   var navLinks = document.querySelectorAll('.nav-link[href^="#"]');
   var sectionEls = [];
