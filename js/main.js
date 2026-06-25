@@ -238,17 +238,29 @@ document.addEventListener('DOMContentLoaded', function () {
   // Menú móvil — el overlay se crea dinámicamente para no ensuciar el HTML
   var menuToggle = document.querySelector('.menu-toggle');
   var mainNav = document.querySelector('.main-nav');
+  var mobileNavLinks = mainNav ? mainNav.querySelectorAll('.nav-link') : [];
 
   var overlay = document.createElement('div');
   overlay.className = 'nav-overlay';
   overlay.setAttribute('aria-hidden', 'true');
   document.body.appendChild(overlay);
 
+  function setMobileLinksTabindex(value) {
+    mobileNavLinks.forEach(function (link) {
+      link.setAttribute('tabindex', value);
+    });
+  }
+
   function closeMenu() {
     menuToggle.setAttribute('aria-expanded', 'false');
     mainNav.classList.remove('is-open');
     overlay.classList.remove('is-visible');
     document.body.style.overflow = '';
+    if (window.innerWidth < 1024) {
+      setMobileLinksTabindex('-1');
+    }
+    document.removeEventListener('keydown', trapFocus);
+    menuToggle.focus();
   }
 
   function openMenu() {
@@ -256,6 +268,33 @@ document.addEventListener('DOMContentLoaded', function () {
     mainNav.classList.add('is-open');
     overlay.classList.add('is-visible');
     document.body.style.overflow = 'hidden';
+    setMobileLinksTabindex('0');
+    document.addEventListener('keydown', trapFocus);
+    mobileNavLinks[0].focus();
+  }
+
+  function trapFocus(e) {
+    if (e.key === 'Escape') {
+      closeMenu();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+
+    var focusable = [menuToggle].concat(Array.from(mobileNavLinks));
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   }
 
   var headerInner = document.querySelector('.header-inner');
@@ -265,8 +304,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateNavPosition() {
     if (window.innerWidth >= 1024) {
       headerInner.insertBefore(mainNav, headerCta);
-    } else {
+      setMobileLinksTabindex('0');
+    } else if (!mainNav.classList.contains('is-open')) {
       document.body.appendChild(mainNav);
+      setMobileLinksTabindex('-1');
     }
   }
 
@@ -280,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     overlay.addEventListener('click', closeMenu);
 
-    mainNav.querySelectorAll('.nav-link').forEach(function (link) {
+    mobileNavLinks.forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
 
