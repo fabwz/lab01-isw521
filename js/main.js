@@ -258,7 +258,21 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.style.overflow = 'hidden';
   }
 
+  var headerInner = document.querySelector('.header-inner');
+
+  var headerCta = document.querySelector('.header-cta');
+
+  function updateNavPosition() {
+    if (window.innerWidth >= 1024) {
+      headerInner.insertBefore(mainNav, headerCta);
+    } else {
+      document.body.appendChild(mainNav);
+    }
+  }
+
   if (menuToggle && mainNav) {
+    updateNavPosition();
+
     menuToggle.addEventListener('click', function () {
       var isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
       if (isOpen) { closeMenu(); } else { openMenu(); }
@@ -274,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth >= 1024) {
         closeMenu();
       }
+      updateNavPosition();
     });
   }
 
